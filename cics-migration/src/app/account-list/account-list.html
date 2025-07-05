@@ -1,0 +1,21 @@
+<div class="account-list-container">
+  <h2>Account List</h2>
+  <table class="account-list-table">
+    <thead>
+      <tr>
+        <th>Account Number</th>
+        <th>Customer Name</th>
+        <th>Balance</th>
+        <th>Currency</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let account of accounts">
+        <td>{{ account.accountNumber }}</td>
+        <td>{{ account.customerName }}</td>
+        <td>{{ account.balance | number:'1.2-2' }}</td>
+        <td>{{ account.currency }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

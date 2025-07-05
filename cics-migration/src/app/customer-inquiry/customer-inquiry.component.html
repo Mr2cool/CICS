@@ -1,0 +1,15 @@
+<div class="customer-inquiry-container">
+  <h2>Customer Inquiry</h2>
+  <form [formGroup]="inquiryForm" (ngSubmit)="onSearch()">
+    <label for="customerId">Customer ID:</label>
+    <input id="customerId" formControlName="customerId" type="text" />
+    <button type="submit">Search</button>
+  </form>
+
+  <div *ngIf="customerData" class="result">
+    <h3>Customer Details</h3>
+    <p><strong>Name:</strong> {{ customerData.name }}</p>
+    <p><strong>Email:</strong> {{ customerData.email }}</p>
+    <p><strong>Status:</strong> {{ customerData.status }}</p>
+  </div>
+</div>
